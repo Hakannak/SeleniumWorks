@@ -10,14 +10,12 @@ public class sauceDemo {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "D:/Selenium/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.saucedemo.com");
-		driver.findElement(By.id("user-name")).sendKeys("standard_user");
-		Thread.sleep(3000);
-		driver.findElement(By.id("password")).sendKeys("secret_sauce");
-		Thread.sleep(3000);
-		driver.findElement(By.className("btn_action")).click();
-		Thread.sleep(3000);
-		driver.close();
+		
+		String url="https://www.facebook.com/";
+		driver.get(url);
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("input[type=email]")).sendKeys("hakan-ak54@hotmail.com");
+		
 	}
 
 }
